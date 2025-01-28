@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
+:root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -12,46 +12,30 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-} */
+}
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   @apply bg-background text-text;
 }
-/* .line::before {
-  content: "";
-  height: 3px;
-  width: 3rem;
-  @apply bg-accent;
-  position: absolute;
-  top: 10px;
-  left: -1rem;
-} */
 
-.line{
- 
-  padding-left: 4rem;
-  position: relative;
-  display: block;
-  transition: background-color 0.3s ease, width 0.3s ease;
-  font-size: 16px;
+.line {
+  @apply pl-[4rem] relative transition-all text-[16px] ease-in-out antialiased text-accent;
 }
-.line:hover{
-  padding-left: 5rem;
-  font-size: 17px;
+
+.line:hover,
+.line.active {
+  @apply pl-[5rem] text-[17px];
 }
+
 .line::before {
-  content: ""; 
-  position: absolute;
-  left: 0; 
-  top: 50%; 
-  transform: translateY(-50%); 
-  width: 3rem; 
-  height: 2px;
-  @apply bg-accent; 
-  transition: background-color 0.3s ease, width 0.3s ease;
+  content: "";
+  @apply absolute left-0 top-1/2 translate-y-[calc(-50%)] w-[3rem] h-[2px] bg-accent transition-all ease-in-out antialiased;
 }
 
-
-.line:hover::before {
-  width: 4rem 
+.line:hover::before,
+.line.active::before {
+  @apply w-[4rem];
 }

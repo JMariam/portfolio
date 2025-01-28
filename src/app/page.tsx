@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <Layout>
       <div className=" w-[80%] mr-auto">
-        <section id="about" className="pt-28">
+        <section id="about" className="pt-28 mb-40">
           <p className="text-[14px] leading-[24px] ">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
             neque? Nemo, eius! Repellendus quidem eveniet, quo iure laudantium
@@ -27,7 +27,7 @@ export default function Home() {
             quaerat? 
           </p>
         </section>
-        <section id="project" className="mt-40">
+        <section id="project" className="">
           <p className="text-[14px] leading-[24px] ">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
             neque? Nemo, eius! Repellendus quidem eveniet, quo iure laudantium

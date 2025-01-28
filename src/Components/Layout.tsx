@@ -6,16 +6,16 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoMailOpen } from "react-icons/io5";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useActiveSection } from "./UseActive";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#project", label: "Project" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", id: "about", label: "About" },
+  { href: "#project", id: "project", label: "Project" },
+  { href: "#contact", id: "contact", label: "Contact" },
 ];
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const pathname = usePathname();
+  const activeSection = useActiveSection(navLinks.map((link) => link.id));
 
   return (
     <div className="">
@@ -26,7 +26,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="h-full flex flex-col justify-between w-[60%] m-auto py-28">
             {/* Personal Info */}
             <div>
-              <h1 className="text-[40px] font-bold">JUBRIL MARIAM</h1>
+              <h1 className="text-[40px] font-bold text-accent">JUBRIL MARIAM</h1>
               <h3 className="text-[21px] mt-1 mb-5">FRONTEND DEVELOPER</h3>
               <p className="">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -34,14 +34,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </p>
             </div>
             {/* Navigation Links */}
-            <nav className="space-y-4">
+            <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => {
-                const isActive = pathname === link.href;
+                const isActive = activeSection === link.id;
+
                 return (
                   <Link
                     href={link.href}
                     key={link.href}
-                    className={`line ${isActive ? "pl-[20rem] text-[17px] before:w-[10rem]" : ""}`}
+                    className={`group line ${isActive ? "active" : ""}`}
                   >
                     {link.label}
                   </Link>
