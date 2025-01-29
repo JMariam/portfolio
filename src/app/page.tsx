@@ -29,7 +29,36 @@ export default function Home() {
           </p>
         </section>
         <section id="project" className="">
-          <Projects img = '/pro1.png' text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!" />
+          <div className="mb-8 lg:mb-12">
+            <p className="text-[18px] leading-[40px] font-bold">PORTFOLIO</p>
+            <p className="text-[12px] lg:w-[55%]">
+              Some handpicked projects i have worked on over the years.
+            </p>
+          </div>
+          <div className="grid gap-12">
+            <Projects
+              img="/pro1.png"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
+              site=""
+            />
+            <Projects
+              img="/pro2.png"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
+              site=""
+            />
+
+            <Projects
+              img="/pro3.png"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
+              site=""
+            />
+
+            <Projects
+              img="/pro4.png"
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
+              site=""
+            />
+          </div>
         </section>
       </div>
     </Layout>
