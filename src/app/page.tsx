@@ -28,11 +28,11 @@ export default function Home() {
             quaerat?
           </p>
         </section>
-        <section id="project" className="">
+        <section id="project" className="pt-28">
           <div className="mb-8 lg:mb-12">
-            <p className="text-[18px] leading-[40px] font-bold">PORTFOLIO</p>
+            <p className="text-[18px] leading-[40px] font-bold text-text2">PROJECTS</p>
             <p className="text-[12px] lg:w-[55%]">
-              Some handpicked projects i have worked on over the years.
+              Some handpicked projects I have worked on over the years.
             </p>
           </div>
           <div className="grid gap-12">
