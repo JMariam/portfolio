@@ -18,11 +18,11 @@ html {
 }
 
 body {
-  @apply bg-background text-text;
+  @apply bg-background text-text1;
 }
 
 .line {
-  @apply pl-[4rem] relative transition-all text-[16px] ease-in-out antialiased text-accent;
+  @apply pl-[4rem] relative transition-all text-[16px] ease-in-out antialiased text-text2;
 }
 
 .line:hover,
@@ -32,7 +32,7 @@ body {
 
 .line::before {
   content: "";
-  @apply absolute left-0 top-1/2 translate-y-[calc(-50%)] w-[3rem] h-[2px] bg-accent transition-all ease-in-out antialiased;
+  @apply absolute left-0 top-1/2 translate-y-[calc(-50%)] w-[3rem] h-[2px] bg-text2 transition-all ease-in-out antialiased;
 }
 
 .line:hover::before,

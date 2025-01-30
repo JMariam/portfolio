@@ -26,7 +26,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="h-full flex flex-col justify-between w-[60%] m-auto py-28">
             {/* Personal Info */}
             <div>
-              <h1 className="text-[40px] font-bold text-accent">JUBRIL MARIAM</h1>
+              <h1 className="text-[40px] font-bold text-text2">JUBRIL MARIAM</h1>
               <h3 className="text-[21px] mt-1 mb-5">FRONTEND DEVELOPER</h3>
               <p className="">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -56,24 +56,24 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub className="text-[32px] cursor-pointer" />
+                <FaGithub className="text-[32px] cursor-pointer text-accent" />
               </Link>
               <Link
                 href="https://www.linkedin.com/in/mariam-jubril/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin className="text-[32px] cursor-pointer" />
+                <FaLinkedin className="text-[32px] cursor-pointer text-accent" />
               </Link>
               <Link
                 href="https://x.com/MariamJubril7"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaSquareXTwitter className="text-[32px] cursor-pointer" />
+                <FaSquareXTwitter className="text-[32px] cursor-pointer text-accent" />
               </Link>
               <Link href="mailto:mariamjubril29@gmail.com">
-                <IoMailOpen className="text-[32px] cursor-pointer" />
+                <IoMailOpen className="text-[32px] cursor-pointer text-accent" /> 
               </Link>
             </div>
           </div>
