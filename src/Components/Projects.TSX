@@ -12,11 +12,17 @@ interface ProjectsProps {
 export default function Projects({ img, text, site }: ProjectsProps) {
   return (
     <div className="relative w-[80%] mx-auto">
-      <img src={img} alt="" className="h-[16rem] w-full rounded-xl transition-all" />
+      <img
+        src={img}
+        alt=""
+        className="h-[16rem] w-full rounded-xl transition-all"
+      />
       <div className="w-[100%] h-[100%] top-0 left-0 absolute bg-background2 gap-6 p-8 flex justify-center flex-col opacity-0 hover:opacity-95 transition-all rounded-xl ">
         <p className="text-[12px]">{text}</p>
         <Link
           href={site}
+          target="_blank"
+          rel="noopener noreferrer"
           className="py-2 px-4 text-[12px] bg-accent rounded-full w-fit flex items-center gap-2"
         >
           <p className="text-[12px] text-white">View Website</p>

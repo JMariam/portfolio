@@ -39,24 +39,24 @@ export default function Home() {
             <Projects
               img="/pro1.png"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
-              site=""
+              site="https://multi-step-form-bice-seven.vercel.app/"
             />
             <Projects
               img="/pro2.png"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
-              site=""
+              site="https://countries-iota-eight.vercel.app/"
             />
 
             <Projects
               img="/pro3.png"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
-              site=""
+              site="https://tcw-gilt.vercel.app/"
             />
 
             <Projects
               img="/pro4.png"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
-              site=""
+              site="https://jmariam.github.io/diamondluxury/"
             />
           </div>
         </section>
