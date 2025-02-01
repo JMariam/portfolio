@@ -16,7 +16,7 @@ export default {
       },
       colors: {
         primary: "#D6D6D6", // Warm Grey for buttons, highlights
-        // background: "#F5F5F5", // Light Grey for background
+        background3: "#F5F5F5", // Light Grey for background
         text: "#505050", // Charcoal Grey for main text
         // accent: "#2E2E2E", // Blackish Grey for headings, borders, or call-to-action
         background: "#F9FAFB", // Use for light backgrounds

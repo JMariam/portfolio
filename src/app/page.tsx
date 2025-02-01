@@ -6,7 +6,7 @@ export default function Home() {
     <Layout>
       <div className=" w-[80%] mr-auto">
         <section id="about" className="pt-28">
-          <p className="text-[14px] leading-[24px] ">
+          <p className="text-[14px] leading-[28px] ">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
             neque? Nemo, eius! Repellendus quidem eveniet, quo iure laudantium
             labore soluta distinctio modi non est corrupti aspernatur molestiae
@@ -31,7 +31,7 @@ export default function Home() {
         <section id="project" className="pt-28">
           <div className="mb-8 lg:mb-12">
             <p className="text-[18px] leading-[40px] font-bold text-text2">PROJECTS</p>
-            <p className="text-[12px] lg:w-[55%]">
+            <p className="text-[13px] leading-[24px] lg:w-[55%]">
               Some handpicked projects I have worked on over the years.
             </p>
           </div>

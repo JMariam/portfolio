@@ -30,7 +30,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 JUBRIL MARIAM
               </h1>
               <h3 className="text-[21px] mt-1 mb-5">FRONTEND DEVELOPER</h3>
-              <p className="text-[13px] leading-[px]">
+              <p className="text-[13px] leading-[24px]">
                 I am passionate about building functional, responsive and
                 scalable websites.
               </p>

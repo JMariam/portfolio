@@ -11,24 +11,26 @@ interface ProjectsProps {
 
 export default function Projects({ img, text, site }: ProjectsProps) {
   return (
-    <div className="relative w-[80%] mx-auto">
-      <img
-        src={img}
-        alt=""
-        className="h-[16rem] w-full rounded-xl transition-all"
-      />
-      <div className="w-[100%] h-[100%] top-0 left-0 absolute bg-background2 gap-6 p-8 flex justify-center flex-col opacity-0 hover:opacity-95 transition-all rounded-xl ">
-        <p className="text-[12px]">{text}</p>
-        <Link
-          href={site}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="py-2 px-4 text-[12px] bg-accent rounded-full w-fit flex items-center gap-2"
-        >
-          <p className="text-[12px] text-white">View Website</p>
+    <div className="w-full bg-background3 px-auto py-[5%] rounded-lg">
+      <div className="relative w-[90%] mx-auto">
+        <img
+          src={img}
+          alt=""
+          className="h-[18rem] w-full rounded-xl transition-all"
+        />
+        <div className="w-[100%] h-[100%] top-0 left-0 absolute bg-background2 border border-primary gap-6 p-8 flex justify-center flex-col opacity-0 hover:opacity-95 transition-all rounded-xl ">
+          <p className="text-[12px] leading-[22px]">{text}</p>
+          <Link
+            href={site}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-accent flex w-fit h-10 py-auto items-center gap-3 px-4 rounded-xl"
+          >
+            <p className="text-background3 text-[12px] leading-[12px]">View Website</p>
 
-          <FaAngleRight className="text-background" />
-        </Link>
+            <FaAngleRight className="text-background3 text-[12px]" />
+          </Link>
+        </div>
       </div>
     </div>
   );
