@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import { FaAngleRight } from "react-icons/fa";
 import Link from "next/link";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 
 interface ProjectsProps {
   img: string;
@@ -11,19 +13,23 @@ interface ProjectsProps {
 }
 
 export default function Projects({ img, text, site }: ProjectsProps) {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "start start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   return (
-    <div className="cards">
+    <div className="cards" ref={container}>
       <div className="w-full bg-background3 px-auto py-[5%] rounded-lg card">
         <div className="relative w-[90%] mx-auto">
-          <div className="images h-[18rem] w-full rounded-xl transition-all">
-            <div className="inner ">
+          <div className="images h-[18rem] relative w-full rounded-xl transition-all overflow-hidden">
+            <motion.div className="inner" style={{ scale }}>
               {" "}
-              <img
-                src={img}
-                alt=""
-                
-              />
-            </div>
+              <Image fill src={img} alt="image" className="object-cover"/>
+              {/* <img src={img} alt="" className="object-cover" /> */}
+            </motion.div>
           </div>
 
           <div className="w-[100%] h-[100%] top-0 left-0 absolute bg-background2 border border-primary gap-6 p-8 flex justify-center flex-col opacity-0 hover:opacity-95 transition-all rounded-xl ">
