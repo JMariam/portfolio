@@ -35,26 +35,26 @@ export default function Home() {
               Some handpicked projects I have worked on over the years.
             </p>
           </div>
-          <div className="grid gap-12">
+          <div className="main grid gap-12">
             <Projects
-              img="/pro1.png"
+              img="/pro1-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
               site="https://multi-step-form-bice-seven.vercel.app/"
             />
             <Projects
-              img="/pro2.png"
+              img="/pro2-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
               site="https://countries-iota-eight.vercel.app/"
             />
 
             <Projects
-              img="/pro3.png"
+              img="/pro3-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
               site="https://tcw-gilt.vercel.app/"
             />
 
             <Projects
-              img="/pro4.png"
+              img="/pro4-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
               site="https://jmariam.github.io/diamondluxury/"
             />
