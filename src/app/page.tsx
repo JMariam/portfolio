@@ -35,7 +35,7 @@ export default function Home() {
               Some handpicked projects I have worked on over the years.
             </p>
           </div>
-          <div className="main grid gap-12">
+          <div className="main">
             <Projects
               img="/pro1-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"

@@ -13,22 +13,22 @@ interface ProjectsProps {
 }
 
 export default function Projects({ img, text, site }: ProjectsProps) {
-  const container = useRef(null);
+  const containerRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
-    target: container,
+    target: containerRef,
     offset: ["start end", "start start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   return (
-    <div className="cards" ref={container}>
+    <div className="cards" ref={containerRef}>
       <div className="w-full bg-background3 px-auto py-[5%] rounded-lg card">
         <div className="relative w-[90%] mx-auto">
           <div className="images h-[18rem] relative w-full rounded-xl transition-all overflow-hidden">
-            <motion.div className="inner" style={{ scale }}>
+            <motion.div className="inner" style={{ scale: imageScale }}>
               {" "}
-              <Image fill src={img} alt="image" className="object-cover"/>
-              {/* <img src={img} alt="" className="object-cover" /> */}
+              <Image fill src={img} alt="image" className="object-cover" />
             </motion.div>
           </div>
 
