@@ -1,6 +1,5 @@
 import Layout from "@/Components/Layout";
-
-
+import Portfolio from "@/Components/Portfolio";
 export default function Home() {
   return (
     <Layout>
@@ -30,34 +29,34 @@ export default function Home() {
         </section>
         <section id="project" className="pt-28">
           <div className="mb-8 lg:mb-12">
-            <p className="text-[18px] leading-[40px] font-bold text-text2">PROJECTS</p>
+            <p className="text-[18px] leading-[40px] font-bold text-text2">Projects</p>
             <p className="text-[13px] leading-[24px] lg:w-[55%]">
-              Some handpicked projects I have worked on over the years.
+              Some handpicked Projects I have worked on over the years.
             </p>
           </div>
           <div className="main">
-            {/* <Projects
+            <Portfolio
               img="/pro1-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
               site="https://multi-step-form-bice-seven.vercel.app/"
             />
-            <Projects
+            <Portfolio
               img="/pro2-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
               site="https://countries-iota-eight.vercel.app/"
             />
 
-            <Projects
+            <Portfolio
               img="/pro3-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
               site="https://tcw-gilt.vercel.app/"
             />
 
-            <Projects
+            <Portfolio
               img="/pro4-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
               site="https://jmariam.github.io/diamondluxury/"
-            /> */}
+            />
           </div>
         </section>
       </div>
