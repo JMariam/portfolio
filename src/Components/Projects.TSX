@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
-import React, { useRef } from "react";
+// import React, { useRef } from "react";
 import { FaAngleRight } from "react-icons/fa";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+// import { motion, useScroll, useTransform } from "framer-motion";
+// import Image from "next/image";
 
 interface ProjectsProps {
   img: string;
@@ -12,23 +13,23 @@ interface ProjectsProps {
 }
 
 export default function Projects({ img, text, site }: ProjectsProps) {
-  const containerRef = useRef(null);
+  // const containerRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "start start"],
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: containerRef,
+  //   offset: ["start end", "start start"],
+  // });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  // const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   return (
-    <div className="cards" ref={containerRef}>
+    <div className="cards" >
       <div className="w-full bg-background3 px-auto py-[5%] rounded-lg card">
         <div className="relative w-[90%] mx-auto">
           <div className="images h-[18rem] relative w-full rounded-xl transition-all overflow-hidden">
-            <motion.div className="inner" style={{ scale: imageScale }}>
+            <div className="inner">
               {" "}
-              <Image fill src={img} alt="image" className="object-cover" />
-            </motion.div>
+              <img src={img} alt="image" className="object-cover" />
+            </div>
           </div>
 
           <div className="w-[100%] h-[100%] top-0 left-0 absolute bg-background2 border border-primary gap-6 p-8 flex justify-center flex-col opacity-0 hover:opacity-95 transition-all rounded-xl ">
