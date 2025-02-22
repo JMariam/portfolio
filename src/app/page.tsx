@@ -1,5 +1,4 @@
 import Layout from "@/Components/Layout";
-import Projects from "@/Components/Projects";
 
 
 export default function Home() {
@@ -37,7 +36,7 @@ export default function Home() {
             </p>
           </div>
           <div className="main">
-            <Projects
+            {/* <Projects
               img="/pro1-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
               site="https://multi-step-form-bice-seven.vercel.app/"
@@ -58,7 +57,7 @@ export default function Home() {
               img="/pro4-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
               site="https://jmariam.github.io/diamondluxury/"
-            />
+            /> */}
           </div>
         </section>
       </div>
