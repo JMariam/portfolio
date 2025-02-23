@@ -2,6 +2,32 @@ import Layout from "@/components/Layout";
 import Portfolio from "@/components/Portfolio";
 
 export default function Home() {
+  const projects = [
+    {
+      id: 1,
+      img: "/pro1-.webp",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!",
+      site: "https://multi-step-form-bice-seven.vercel.app/",
+    },
+    {
+      id: 2,
+      img: "/pro2-.webp",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!",
+      site: "https://countries-iota-eight.vercel.app/",
+    },
+    {
+      id: 3,
+      img: "/pro3-.webp",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!",
+      site: "https://tcw-gilt.vercel.app/",
+    },
+    {
+      id: 4,
+      img: "/pro4-.webp",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!",
+      site: "https://jmariam.github.io/diamondluxury/",
+    },
+  ]
   return (
     <Layout>
       <div className=" w-[80%] mr-auto">
@@ -35,7 +61,17 @@ export default function Home() {
               Some handpicked Projects I have worked on over the years.
             </p>
           </div>
-          <div className="main">
+          <div className="cards">
+          {projects.map((project) => (
+        <Portfolio
+          key={project.id}
+          img={project.img}
+          text={project.text}
+          site={project.site}
+        />
+      ))}
+          </div>
+          {/* <div className="main">
             <Portfolio
               img="/pro1-.webp"
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
@@ -58,7 +94,7 @@ export default function Home() {
               text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
               site="https://jmariam.github.io/diamondluxury/"
             />
-          </div>
+          </div> */}
         </section>
       </div>
     </Layout>
