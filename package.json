@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/next": "^1.4.9",
     "autoprefixer": "^10.4.20",
     "framer-motion": "^12.0.11",
     "lodash": "^4.17.21",
