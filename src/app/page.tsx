@@ -1,5 +1,7 @@
 import Layout from "@/components/Layout";
 import Portfolio from "@/components/Portfolio";
+import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const projects = [
@@ -27,8 +29,9 @@ export default function Home() {
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!",
       site: "https://jmariam.github.io/diamondluxury/",
     },
-  ]
+  ];
   return (
+    <div className="">
     <Layout>
       <div className=" w-[80%] mr-auto">
         <section id="about" className="pt-28">
@@ -56,20 +59,22 @@ export default function Home() {
         </section>
         <section id="project" className="pt-28">
           <div className="mb-8 lg:mb-12">
-            <p className="text-[18px] leading-[40px] font-bold text-text2">Projects</p>
+            <p className="text-[18px] leading-[40px] font-bold text-text2">
+              Projects
+            </p>
             <p className="text-[13px] leading-[24px] lg:w-[55%]">
               Some handpicked Projects I have worked on over the years.
             </p>
           </div>
           <div className="cards">
-          {projects.map((project) => (
-        <Portfolio
-          key={project.id}
-          img={project.img}
-          text={project.text}
-          site={project.site}
-        />
-      ))}
+            {projects.map((project) => (
+              <Portfolio
+                key={project.id}
+                img={project.img}
+                text={project.text}
+                site={project.site}
+              />
+            ))}
           </div>
           {/* <div className="main">
             <Portfolio
@@ -96,7 +101,19 @@ export default function Home() {
             />
           </div> */}
         </section>
+        <section>
+          <Experience
+            date="2024 - Present"
+            title="Frontend Developer • Sweep Drones LImited"
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+        nulla inventore pariatur ab, molestiae fugit eaque cupiditate minus.
+        Odit, ab!"
+          />
+        </section>
       </div>
+     
     </Layout>
+    <Footer/>
+    </div>
   );
 }

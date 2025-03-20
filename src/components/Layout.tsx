@@ -7,6 +7,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoMailOpen } from "react-icons/io5";
 import Link from "next/link";
 import { useActiveSection } from "./UseActive";
+import Footer from "./Footer";
 
 const navLinks = [
   { href: "#about", id: "about", label: "About" },
@@ -84,6 +85,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {/* Main Content */}
         <main className="ml-1/2 w-1/2 overflow-y-auto ">{children}</main>
       </div>
+      {/* <Footer/> */}
     </div>
   );
 };
