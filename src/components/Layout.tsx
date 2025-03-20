@@ -85,7 +85,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {/* Main Content */}
         <main className="ml-1/2 w-1/2 overflow-y-auto ">{children}</main>
       </div>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 };

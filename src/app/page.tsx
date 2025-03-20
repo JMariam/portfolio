@@ -1,7 +1,6 @@
 import Layout from "@/components/Layout";
 import Portfolio from "@/components/Portfolio";
 import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   const projects = [
@@ -113,7 +112,6 @@ export default function Home() {
       </div>
      
     </Layout>
-    <Footer/>
     </div>
   );
 }
