@@ -41,35 +41,36 @@ body {
 }
 
 :root {
-	--cards: 4;
-	--cardHeight: 87vh;
-	--cardTopPadding: 1.5em;
-	--cardMargin: 4vw;
+  --card-height: 500px;
+  --card-margin: 2rem;
+  --card-top-padding: 1.5em;
 }
-/* CARDS */
-.cards {
+
+.cards-container {
   display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(var(--cards), var(--cardHeight));
-	gap: var(--cardMargin);
-	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
-	margin-bottom: var(--cardMargin);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--card-margin);
+  padding: 2rem 0;
 }
-/* Add this for progressive z-index stacking */
-.cards:nth-child(1) {
-  --index: 1
-}
-.cards:nth-child(2) {
-  --index: 2
-}
-.cards:nth-child(3) {
-  --index: 3
-}
-.cards:nth-child(4) {
-  --index: 4
-}
+
 .card {
-	position: sticky;
-	top: 0;
-	padding-top: calc(var(--index) * var(--cardTopPadding));
+  position: relative;
+  min-height: var(--card-height);
+  padding-top: var(--card-top-padding);
+}
+
+.card:nth-child(1) { z-index: 4; }
+.card:nth-child(2) { z-index: 3; }
+.card:nth-child(3) { z-index: 2; }
+.card:nth-child(4) { z-index: 1; }
+
+@media (max-width: 768px) {
+  :root {
+    --card-height: auto;
+    --card-margin: 1rem;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
 }
