@@ -1,5 +1,6 @@
 "use client";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useState, useRef, useEffect } from "react";
 import MouseEffect from "./MouseEffect";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
