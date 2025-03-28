@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 
@@ -12,7 +12,7 @@ import "./globals.css";
 //   variable: "--font-geist-mono",
 //   subsets: ["latin"],
 // });
-const ibm = IBM_Plex_Mono({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700"],
 });
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={ibm.className}
+        className={inter.className}
       >
         {children}
        
