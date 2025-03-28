@@ -1,81 +1,114 @@
+"use client";
+
 import Layout from "@/components/Layout";
 import Portfolio from "@/components/Portfolio";
 import Experience from "@/components/Experience";
 import { FaArrowDown } from "react-icons/fa";
+import { useScroll } from "framer-motion";
+import { useRef, useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
+
+  // useEffect( () => {
+  //   const lenis = new Lenis()
+
+  //   function raf(time) {
+  //     lenis.raf(time)
+  //     requestAnimationFrame(raf)
+  //   }
+
+  //   requestAnimationFrame(raf)
+  // })
+
   const projects = [
     {
-      id: 1,
       img: "/pro1-.webp",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!",
+      text: "Mlti-step Form is a dynamic multi-step form using Next.js and Zod, featuring step navigation, real-time pricing updates, and cross-step state persistence, tackling challenges in dynamic validation and state transitions to ensure a smooth user experience.",
       site: "https://multi-step-form-bice-seven.vercel.app/",
     },
     {
-      id: 2,
       img: "/pro2-.webp",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!",
+      text: "REST Countries API is a responsive country information app using Next.js and the REST Countries API, featuring dynamic search/filtering, dark mode toggle, and detailed country profiles, solving challenges in API integration and state management to deliver a fast, intuitive interface for exploring global data.",
       site: "https://countries-iota-eight.vercel.app/",
     },
     {
-      id: 3,
       img: "/pro3-.webp",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!",
+      text: "Positivus is a responsive landing page using Next.js, showcasing services, team bios, and contact forms, optimizing UI/UX for conversions and brand consistency through dynamic animations and clean code.",
       site: "https://tcw-gilt.vercel.app/",
     },
     {
-      id: 4,
       img: "/pro4-.webp",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!",
-      site: "https://jmariam.github.io/diamondluxury/",
+      text: "Diamond Luxury is a responsive real estate landing page using React.js and Tailwind CSS, featuring immersive property visuals and dynamic scroll effects, optimizing performance and visual consistency for premium user engagement.",
+      site: "https://diamondluxury.vercel.app/",
     },
   ];
+
   return (
     <div className="">
       <Layout>
-        <div className=" w-[80%] mr-auto">
-          <section id="about" className="pt-28">
-            <p className="text-[14px] leading-[28px] ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
-              neque? Nemo, eius! Repellendus quidem eveniet, quo iure laudantium
-              labore soluta distinctio modi non est corrupti aspernatur
-              molestiae quia perferendis minus libero aut totam, animi doloribus{" "}
+        <div className="w-[90%] mx-auto lg:w-[80%] lg:mr-auto">
+          <section id="about" className="pt-16 lg:pt-28">
+            <p className="text-[13px] lg:text-[14px] leading-[28px] lg:w-[99%]">
+              I am a dedicated frontend developer with a strong focus on
+              building functional, responsive, and scalable web applications. My
+              expertise lies in crafting intuitive user interfaces that
+              prioritize performance, accessibility, and seamless user
+              experience. With a keen eye for design and an analytical approach
+              to problem-solving, I develop digital solutions that merge
+              aesthetics with efficiency.
               <br /> <br />
-              exercitationem dicta excepturi! Quos quas blanditiis veniam,
-              assumenda quod perferendis, vitae dicta ab laudantium, beatae enim
-              possimus. Delectus debitis modi nostrum, quod voluptas at deleniti
-              iste libero explicabo nisi harum consectetur obcaecati! Fuga
-              assumenda animi nam, qui iusto magni quae atque consequuntur
-              repellendus possimus, debitis a, quidem dicta placeat eveniet
-              sequi? Sint ipsum, nam minima quidem veniam corporis impedit
-              accusamus deserunt maxime rerum voluptates <br /> <br />
-              laboriosam ad qui nulla laudantium totam asperiores mollitia
-              placeat voluptatibus facilis! Assumenda qui fuga dolorem atque
-              optio eligendi quasi. Placeat ex, quidem est facere nisi suscipit
-              earum odio aut alias iusto, qui fugit totam repellendus
-              praesentium at tempore unde harum et fugiat dolore. Obcaecati
-              commodi harum totam quaerat?
+              Currently, I am pursuing a degree in Computer Science with
+              Economics, equipping me with both technical proficiency and a
+              strategic understanding of technology’s role in business and
+              society. This interdisciplinary background allows me to approach
+              development with a broader perspective, ensuring that the
+              solutions I create are not only technically sound but also
+              economically viable and scalable.
+              <br /> <br />
+              Beyond development, I have a deep interest in languages and
+              cross-cultural communication. I am currently learning Spanish,
+              further expanding my ability to engage with diverse perspectives
+              and global communities.
             </p>
           </section>
-          <section id="project" className="pt-28">
-            <div className="mb-8 lg:mb-12">
+          <section id="project" className="pt-20 lg:pt-28">
+            <div className="">
               <p className="text-[18px] leading-[40px] font-bold text-text2">
                 Projects
               </p>
-              <p className="text-[13px] leading-[24px] lg:w-[55%]">
-                Some handpicked Projects I have worked on over the years.
+              <p className="text-[13px] leading-[24px] lg:w-[75%]">
+                A selection of projects I&apos;ve built over the years,
+                showcasing my expertise and creativity.
               </p>
             </div>
-            <div className="cards">
-              {projects.map((project) => (
-                <Portfolio
-                  key={project.id}
-                  img={project.img}
-                  text={project.text}
-                  site={project.site}
-                />
+            <main ref={container} className="main relative">
+              {projects.map((project, i) => {
+                const targetScale = 1 - (projects.length - i) * 0.05;
+
+                return (
+                  <Portfolio
+                    key={`p_${i}`}
+                    i={i}
+                    {...project}
+                    progress={scrollYProgress}
+                    range={[i * 0.25, 1]}
+                    targetScale={targetScale}
+                  />
+                );
+              })}
+            </main>
+            {/* <div className="main" ref={container}>
+              {projects.map((project, i) => (
+                const targetScale = 1 - ( (projects.length - i) * 0.05);
+                <Portfolio key={`p_${i}`} {...project} i={i} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale}/>
               ))}
-            </div>
+            </div> */}
             {/* <div className="main">
             <Portfolio
               img="/pro1-.webp"
@@ -101,7 +134,7 @@ export default function Home() {
             />
           </div> */}
           </section>
-          <section id="experience" className="py-10">
+          <section id="experience" className="pb-10">
             <div className="mb-8 ">
               <p className="text-[18px] leading-[40px] font-bold text-text2">
                 Experience
@@ -114,16 +147,16 @@ export default function Home() {
               <Experience
                 date="2024 - Present"
                 title="Frontend Developer • Sweep Drones LImited"
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-        nulla inventore pariatur ab, molestiae fugit eaque cupiditate minus.
-        Odit, ab!"
+                text="Collaborated with cross-functional teams to translate UI/UX designs into
+responsive, performant web applications. Focused on building intuitive
+interfaces with clean, maintainable code while adhering to accessibility
+standards.
+"
               />
               <Experience
                 date="2023 - 2024"
                 title="Frontend Developer • ODExhange"
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-        nulla inventore pariatur ab, molestiae fugit eaque cupiditate minus.
-        Odit, ab!"
+                text="Worked closely with designers and product managers to implement interactive, visually appealing user interfaces, ensuring consistency across devices and browsers while optimizing for performance and accessibility."
               />
             </div>
             <a

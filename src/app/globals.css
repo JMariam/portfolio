@@ -17,10 +17,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+
 body {
   @apply bg-background text-text1;
 }
 
+/* .transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+} */
 .line {
   @apply pl-[4rem] relative transition-all text-[16px] ease-in-out antialiased text-text2;
 }
@@ -40,37 +50,31 @@ body {
   @apply w-[4rem];
 }
 
-:root {
-  --card-height: 500px;
-  --card-margin: 2rem;
-  --card-top-padding: 1.5em;
+/* .main{
+  margin-top: -10rem;
+  margin-bottom: -5rem;
+} */
+.card-container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
 }
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--card-margin);
-  padding: 2rem 0;
-}
-
 .card {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  min-height: var(--card-height);
-  padding-top: var(--card-top-padding);
+  transform-origin: top;
 }
-
-.card:nth-child(1) { z-index: 4; }
-.card:nth-child(2) { z-index: 3; }
-.card:nth-child(3) { z-index: 2; }
-.card:nth-child(4) { z-index: 1; }
 
 @media (max-width: 768px) {
-  :root {
-    --card-height: auto;
-    --card-margin: 1rem;
+  .card-container {
+    height: 40vh;
   }
-  
-  .cards-container {
-    grid-template-columns: 1fr;
-  }
+}
+.main{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

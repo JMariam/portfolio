@@ -1,13 +1,14 @@
 "use client";
 
-import React from "react";
+import { useState, useRef, useEffect } from "react";
 import MouseEffect from "./MouseEffect";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoMailOpen } from "react-icons/io5";
 import Link from "next/link";
-import { useActiveSection } from "./UseActive";
 
+import { useActiveSection } from "./UseActive";
+import Footer from "./Footer";
 
 const navLinks = [
   { href: "#about", id: "about", label: "About" },
@@ -18,26 +19,47 @@ const navLinks = [
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const activeSection = useActiveSection(navLinks.map((link) => link.id));
 
+  const mainRef = useRef<HTMLDivElement>(null); // Fixed ref declaration
+  // const [showFooter, setShowFooter] = useState(false);
+
+  // useEffect(() => {
+  //   const mainElement = mainRef.current;
+
+  //   const handleScroll = () => {
+  //     if (mainElement) {
+  //       const isAtBottom =
+  //         mainElement.scrollHeight - mainElement.scrollTop <=
+  //         mainElement.clientHeight + 5;
+  //       setShowFooter(isAtBottom);
+  //     }
+  //   };
+
+  //   mainElement?.addEventListener("scroll", handleScroll);
+  //   return () => mainElement?.removeEventListener("scroll", handleScroll);
+  // }, []); // Keep empty dependency array
+
   return (
     <div className="">
       <MouseEffect />
-      <div className="h-screen flex">
+      <div ref={mainRef} className="flex flex-col lg:flex-row relative">
         {/* Sidebar */}
-        <aside className="w-1/2 h-full sticky top-0">
-          <div className="h-full flex flex-col justify-between w-[60%] m-auto py-28">
+        <aside className="lg:w-1/2 lg:h-screen lg:sticky top-0 overflow-hidden">
+          <div className="h-full flex flex-col gap-8 lg:justify-between w-[90%] py-12 lg:w-[60%] m-auto lg:py-28">
             {/* Personal Info */}
             <div>
-              <h1 className="text-[40px] font-bold text-text2">
+              <h1 className="text-[28px] lg:text-[40px] font-bold text-text2">
                 JUBRIL MARIAM
               </h1>
-              <h3 className="text-[21px] mt-1 mb-5">FRONTEND DEVELOPER</h3>
+              <h3 className="text-[12px] lg:text-[21px] mt-1 mb-8 lg:mb-5">FRONTEND DEVELOPER</h3>
               <p className="text-[13px] leading-[24px]">
-                I am passionate about building functional, responsive and
-                scalable websites.
+                {/* I am passionate about building functional, responsive and
+                scalable websites. */}
+                Transforming ideas into sleek, responsive, and scalable web
+                applications that prioritize performance and accessibility.
               </p>
             </div>
             {/* Navigation Links */}
-            <nav className="flex flex-col space-y-4">
+            <nav className="hidden lg:flex flex-col space-y-4">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id;
 
@@ -83,9 +105,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         </aside>
 
         {/* Main Content */}
-        <main className="ml-1/2 w-1/2 overflow-y-auto ">{children}</main>
+        <main className="lg:w-1/2 relative">{children}</main>
       </div>
-
+      <Footer />
     </div>
   );
 };
