@@ -82,7 +82,7 @@ export default function Home() {
               <p className="text-[18px] leading-[40px] font-bold text-text2">
                 Projects
               </p>
-              <p className="text-[13px] leading-[24px] lg:w-[75%]">
+              <p className="text-[13px] leading-[24px] lg:w-[75%] mt-2">
                 A selection of projects I&apos;ve built over the years,
                 showcasing my expertise and creativity.
               </p>
