@@ -32,12 +32,12 @@ body {
   transition-duration: 150ms;
 } */
 .line {
-  @apply pl-[4rem] relative transition-all text-[16px] ease-in-out antialiased text-text2;
+  @apply pl-[4rem] relative transition-all text-[20px] ease-in-out antialiased text-text2;
 }
 
 .line:hover,
 .line.active {
-  @apply pl-[5rem] text-[17px];
+  @apply pl-[5rem] text-[21px];
 }
 
 .line::before {

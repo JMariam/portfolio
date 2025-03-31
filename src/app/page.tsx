@@ -30,7 +30,7 @@ export default function Home() {
   const projects = [
     {
       img: "/pro1-.webp",
-      text: "Mlti-step Form is a dynamic multi-step form using Next.js and Zod, featuring step navigation, real-time pricing updates, and cross-step state persistence, tackling challenges in dynamic validation and state transitions to ensure a smooth user experience.",
+      text: "Multi-step Form is a dynamic multi-step form using Next.js and Zod, featuring step navigation, real-time pricing updates, and cross-step state persistence, tackling challenges in dynamic validation and state transitions to ensure a smooth user experience.",
       site: "https://multi-step-form-bice-seven.vercel.app/",
     },
     {
@@ -55,7 +55,7 @@ export default function Home() {
       <Layout>
         <div className="w-[90%] mx-auto lg:w-[80%] lg:mr-auto">
           <section id="about" className="pt-16 lg:pt-28">
-            <p className="text-[13px] lg:text-[14px] leading-[28px] lg:w-[99%]">
+            <p className="text-[16px] leading-[30px] lg:w-[99%]">
               I am a dedicated frontend developer with a strong focus on
               building functional, responsive, and scalable web applications. My
               expertise lies in crafting intuitive user interfaces that
@@ -80,10 +80,10 @@ export default function Home() {
           </section>
           <section id="project" className="pt-20 lg:pt-28">
             <div className="">
-              <p className="text-[18px] leading-[40px] font-bold text-text2">
+              <p className="text-[25px] leading-[42px] font-bold text-text2">
                 Projects
               </p>
-              <p className="text-[13px] leading-[24px] lg:w-[75%] mt-2">
+              <p className="text-[16px] leading-[26px] lg:w-[72%] mt-2">
                 A selection of projects I&apos;ve built over the years,
                 showcasing my expertise and creativity.
               </p>
@@ -137,7 +137,7 @@ export default function Home() {
           </section>
           <section id="experience" className="pb-10">
             <div className="mb-8 ">
-              <p className="text-[18px] leading-[40px] font-bold text-text2">
+              <p className="text-[25px] leading-[42px] font-bold text-text2">
                 Experience
               </p>
               {/* <p className="text-[13px] leading-[24px] lg:w-[55%]">
@@ -163,9 +163,9 @@ standards.
             <a
               href="/resume.pdf"
               download="Mariam's Resume"
-              className="mt-6 flex text-[14px] font-[500] underline items-center gap-2 text-text2"
+              className="mt-6 flex text-[18px] font-[500] underline items-center gap-2 text-text2"
             >
-              Download Resume <FaArrowDown />
+              Download Resume <FaArrowDown className="text-[16px]" />
             </a>
           </section>
         </div>

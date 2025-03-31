@@ -36,25 +36,25 @@ export default function Portfolio({ img, text, site, i, progress, range, targetS
         style={{scale, top: `calc(-5vh + ${i * 25}px)` }}
       >
         <div className="w-[90%] mx-auto">
-          <div className="images h-[12rem] lg:h-[18rem] relative w-full rounded-xl overflow-hidden">
+          <div className="images h-[13rem] lg:h-[18rem] relative w-full rounded-xl overflow-hidden">
             <motion.div className="relative inner w-[100%] h-[100%]" style={{scale: imageScale}}>
               <Image fill src={img} alt="image"  />
             </motion.div>
           </div>
 
-          <div className="w-[100%] h-[100%] top-0 left-0 absolute bg-background2 border border-primary gap-6 p-8 flex justify-center flex-col opacity-0 hover:opacity-95 transition-all rounded-xl ">
-            <p className="text-[12px] leading-[22px]">{text}</p>
+          <div className="w-[100%] h-[100%] top-0 left-0 absolute bg-background2 border border-primary gap-6 p-4 lg:p-8 flex justify-center flex-col opacity-0 hover:opacity-95 transition-all rounded-xl ">
+            <p className="text-[13px] lg:text-[16px] leading-[20px] lg:leading-[24px]">{text}</p>
             <Link
               href={site}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-accent flex w-fit h-10 py-auto items-center gap-3 px-4 rounded-xl"
             >
-              <p className="text-background3 text-[12px] leading-[12px]">
+              <p className="text-background3 text-[13px] leading-[13px] lg:text-[16px] lg:leading-[16px]">
                 View Website
               </p>
 
-              <FaAngleRight className="text-background3 text-[12px]" />
+              <FaAngleRight className="text-background3 text-[13px] lg:text-[16px]" />
             </Link>
           </div>
         </div>

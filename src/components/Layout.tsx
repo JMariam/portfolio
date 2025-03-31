@@ -48,11 +48,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="h-full flex flex-col gap-8 lg:justify-between w-[90%] py-12 lg:w-[60%] m-auto lg:py-28">
             {/* Personal Info */}
             <div>
-              <h1 className="text-[28px] lg:text-[40px] font-bold text-text2">
+              <h1 className="text-[32px] lg:text-[44px] leading-[32px] lg:leading-[44px] font-bold text-text2">
                 JUBRIL MARIAM
               </h1>
-              <h3 className="text-[12px] lg:text-[21px] mt-1 mb-8 lg:mb-5">FRONTEND DEVELOPER</h3>
-              <p className="text-[13px] leading-[24px]">
+              <h3 className="text-[16px] lg:text-[25px] mt-1 mb-8 lg:mb-5">FRONTEND DEVELOPER</h3>
+              <p className="text-[16px] leading-[26px]">
                 {/* I am passionate about building functional, responsive and
                 scalable websites. */}
                 Transforming ideas into sleek, responsive, and scalable web
@@ -82,24 +82,24 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub className="text-[32px] cursor-pointer text-accent" />
+                <FaGithub className="text-[36px] cursor-pointer text-accent" />
               </Link>
               <Link
                 href="https://www.linkedin.com/in/mariam-jubril/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin className="text-[32px] cursor-pointer text-accent" />
+                <FaLinkedin className="text-[36px] cursor-pointer text-accent" />
               </Link>
               <Link
                 href="https://x.com/MariamJubril7"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaSquareXTwitter className="text-[32px] cursor-pointer text-accent" />
+                <FaSquareXTwitter className="text-[36px] cursor-pointer text-accent" />
               </Link>
               <Link href="mailto:mariamjubril29@gmail.com">
-                <IoMailOpen className="text-[32px] cursor-pointer text-accent" />
+                <IoMailOpen className="text-[36px] cursor-pointer text-accent" />
               </Link>
             </div>
           </div>

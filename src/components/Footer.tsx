@@ -66,19 +66,19 @@ export default function Footer() {
     // </div>
     <footer>
       <div
-        className="relative bg-background2 text-accent lg:h-[5rem] h-[8rem]"
+        className="relative bg-background2 text-accent lg:h-[5rem] h-[9rem]"
         style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
       >
-        <div className="relative lg:h-[calc(100vh+5rem)] h-[calc(100vh+8rem)] -top-[100vh]">
-          <div className="sticky h-[8rem] top-[calc(100vh-8rem)] lg:h-[5rem] lg:top-[calc(100vh-5rem)]">
-            <div className="flex flex-col lg:flex-row gap-3 justify-center lg:justify-between items-center h-full w-[90%] mx-auto">
+        <div className="relative lg:h-[calc(100vh+5rem)] h-[calc(100vh+9rem)] -top-[100vh]">
+          <div className="sticky h-[9rem] top-[calc(100vh-9rem)] lg:h-[5rem] lg:top-[calc(100vh-5rem)]">
+            <div className="flex flex-col lg:flex-row gap-3 justify-center lg:justify-between items-center h-full w-[90%] m-auto">
               <div className={beau.className}>
-                <p className="text-[24px]">Jmariam</p>
+                <p className="text-[30px] ">Jmariam</p>
               </div>
-              <p className="text-[12px]">
+              <p className="text-[16px]">
                 © {currentYear} Jmariam. All rights reserved.
               </p>
-              <p className="text-[12px] w-fit flex items-center gap-2">
+              <p className="text-[16px] w-fit flex items-center gap-2">
                 <button onClick={handleCopy} className="">
                   {copied
                     ? "Email copied to clipboard!"
