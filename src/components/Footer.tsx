@@ -66,7 +66,7 @@ export default function Footer() {
     // </div>
     <footer>
       <div
-        className="relative bg-background2 text-accent lg:h-[5rem] h-[9rem]"
+        className="bottom-0 relative bg-background2 text-accent lg:h-[5rem] h-[9rem]"
         style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
       >
         <div className="relative lg:h-[calc(100vh+5rem)] h-[calc(100vh+9rem)] -top-[100vh]">

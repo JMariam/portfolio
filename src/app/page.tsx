@@ -146,7 +146,7 @@ export default function Home() {
             </div>
             <div className="grid gap-8">
               <Experience
-                date="2024 - Present"
+                date="Feb 2024 - Jan 2025"
                 title="Frontend Developer • Sweep Drones LImited"
                 text="Collaborated with cross-functional teams to translate UI/UX designs into
 responsive, performant web applications. Focused on building intuitive
@@ -155,7 +155,7 @@ standards.
 "
               />
               <Experience
-                date="2023 - 2024"
+                date="Aug 2023 - Dec 2023"
                 title="Frontend Developer • ODExhange"
                 text="Worked closely with designers and product managers to implement interactive, visually appealing user interfaces, ensuring consistency across devices and browsers while optimizing for performance and accessibility."
               />
