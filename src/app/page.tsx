@@ -34,17 +34,17 @@ export default function Home() {
       site: "https://multi-step-form-bice-seven.vercel.app/",
     },
     {
-      img: "/Mariam Jubril pro2.webp",
+      img: "/MariamJubrilpro2.webp",
       text: "REST Countries API is a responsive country information app using Next.js and the REST Countries API, featuring dynamic search/filtering, dark mode toggle, and detailed country profiles, solving challenges in API integration and state management to deliver a fast, intuitive interface for exploring global data.",
       site: "https://countries-iota-eight.vercel.app/",
     },
     {
-      img: "/Mariam Jubril pro3.webp",
+      img: "/MariamJubrilpro3.webp",
       text: "Positivus is a responsive landing page using Next.js, showcasing services, team bios, and contact forms, optimizing UI/UX for conversions and brand consistency through dynamic animations and clean code.",
       site: "https://tcw-gilt.vercel.app/",
     },
     {
-      img: "/Mariam Jubril pro4.webp",
+      img: "/MariamJubrilpro4.webp",
       text: "Diamond Luxury is a responsive real estate landing page using React.js and Tailwind CSS, featuring immersive property visuals and dynamic scroll effects, optimizing performance and visual consistency for premium user engagement.",
       site: "https://diamondluxury.vercel.app/",
     },
@@ -166,7 +166,7 @@ standards.
               />
             </div>
             <a
-              href="/Mariam Jubril's Resume.pdf"
+              href="/MariamJubril'sResume.pdf"
               download="Mariam Jubril's Resume"
               className="mt-6 flex text-[18px] font-[500] underline items-center gap-2 text-text2"
             >
