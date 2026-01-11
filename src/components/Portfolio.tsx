@@ -17,7 +17,7 @@ import Image from "next/image";
 //   targetScale: number;
 // }
 
-export default function Portfolio({ img, text, site, i, progress, range, targetScale }: any) {
+export default function Portfolio({ img, alt, text, site, i, progress, range, targetScale }: any) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -37,7 +37,7 @@ export default function Portfolio({ img, text, site, i, progress, range, targetS
         <div className="w-[90%] mx-auto">
           <div className="images h-[13rem] lg:h-[18rem] relative w-full rounded-xl overflow-hidden">
             <motion.div className="relative inner w-[100%] h-[100%]" style={{scale: imageScale}}>
-              <Image fill src={img} alt="image"  />
+              <Image fill src={img} alt={alt}  />
             </motion.div>
           </div>
 

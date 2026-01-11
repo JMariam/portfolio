@@ -29,7 +29,8 @@ export default function Home() {
 
   const projects = [
     {
-      img: "/Mariam Jubril pro1.webp",
+      img: "/MariamJubrilpro1.webp",
+      alt: "Mariam Jubril P1",
       text: "Multi-step Form is a dynamic multi-step form using Next.js and Zod, featuring step navigation, real-time pricing updates, and cross-step state persistence, tackling challenges in dynamic validation and state transitions to ensure a smooth user experience.",
       site: "https://multi-step-form-bice-seven.vercel.app/",
     },
