@@ -55,6 +55,11 @@ export default function Home() {
       <Layout>
         <div className="w-[90%] mx-auto lg:w-[80%] lg:mr-auto">
           <section id="about" className="pt-16 lg:pt-28">
+            <p className="sr-only">
+              Mariam Jubril is a frontend developer portfolio website showcasing
+              projects, experience, and contact information.
+            </p>
+
             <p className="text-[16px] leading-[30px] lg:w-[99%]">
               I am a dedicated frontend developer with a strong focus on
               building functional, responsive, and scalable web applications. My

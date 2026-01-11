@@ -76,7 +76,7 @@ export default function Footer() {
                 <p className="text-[30px] ">Jmariam</p>
               </div>
               <p className="text-[16px]">
-                © {currentYear} Jmariam. All rights reserved.
+                © {currentYear} Mariam Jubril. All rights reserved.
               </p>
               <p className="text-[16px] w-fit flex items-center gap-2">
                 <button onClick={handleCopy} className="">

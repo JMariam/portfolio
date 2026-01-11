@@ -49,9 +49,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             {/* Personal Info */}
             <div>
               <h1 className="text-[32px] lg:text-[44px] leading-[32px] lg:leading-[44px] font-bold text-text2">
-                JUBRIL MARIAM
+                MARIAM JUBRIL
               </h1>
-              <h3 className="text-[16px] lg:text-[25px] mt-1 mb-8 lg:mb-5">FRONTEND DEVELOPER</h3>
+              <h2 className="text-[16px] lg:text-[25px] mt-1 mb-8 lg:mb-5">FRONTEND DEVELOPER</h2>
               <p className="text-[16px] leading-[26px]">
                 {/* I am passionate about building functional, responsive and
                 scalable websites. */}
