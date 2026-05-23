@@ -7,16 +7,6 @@ import { useRef} from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-// interface ProjectsProps {
-//   img: string;
-//   text: string;
-//   site: string;
-//   i: number;
-//   progress: MotionValue<number>;
-//   range: number[];
-//   targetScale: number;
-// }
-
 export default function Portfolio({ img, alt, text, site, i, progress, range, targetScale }: any) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({

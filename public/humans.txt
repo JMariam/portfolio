@@ -1,0 +1,12 @@
+/* TEAM */
+Frontend Developer: Otolorin Jubril
+Contact: mariamjubril29@gmail.com
+Twitter: @MariamJubril7
+From: Earth
+
+/* SITE */
+Last update: 2026/05/23
+Language: English
+Doctype: HTML5
+IDE: VS Code, Cursor
+Components: React, Next.js, Tailwind CSS

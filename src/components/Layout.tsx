@@ -20,24 +20,7 @@ const navLinks = [
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const activeSection = useActiveSection(navLinks.map((link) => link.id));
 
-  const mainRef = useRef<HTMLDivElement>(null); // Fixed ref declaration
-  // const [showFooter, setShowFooter] = useState(false);
-
-  // useEffect(() => {
-  //   const mainElement = mainRef.current;
-
-  //   const handleScroll = () => {
-  //     if (mainElement) {
-  //       const isAtBottom =
-  //         mainElement.scrollHeight - mainElement.scrollTop <=
-  //         mainElement.clientHeight + 5;
-  //       setShowFooter(isAtBottom);
-  //     }
-  //   };
-
-  //   mainElement?.addEventListener("scroll", handleScroll);
-  //   return () => mainElement?.removeEventListener("scroll", handleScroll);
-  // }, []); // Keep empty dependency array
+  const mainRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className="">
@@ -49,12 +32,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             {/* Personal Info */}
             <div>
               <h1 className="text-[32px] lg:text-[44px] leading-[32px] lg:leading-[44px] font-bold text-text2">
-                MARIAM JUBRIL
+                OTOLORIN JUBRIL
               </h1>
               <h2 className="text-[16px] lg:text-[25px] mt-1 mb-8 lg:mb-5">FRONTEND DEVELOPER</h2>
               <p className="text-[16px] leading-[26px]">
-                {/* I am passionate about building functional, responsive and
-                scalable websites. */}
                 Transforming ideas into sleek, responsive, and scalable web
                 applications that prioritize performance and accessibility.
               </p>

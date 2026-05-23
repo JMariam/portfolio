@@ -6,8 +6,65 @@ import Portfolio from "@/components/Portfolio";
 import Experience from "@/components/Experience";
 import { FaArrowDown } from "react-icons/fa";
 import { useScroll } from "framer-motion";
-import { useRef, useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
+import { useRef } from "react";
+
+// ─── Project data ──────────────────────────────────────────────────────────────
+
+const projects = [
+  {
+    img: "/MariamJubrilpro1.webp",
+    alt: "Multi-step Form project built by Otolorin Jubril — Next.js and Zod",
+    title: "Multi-step Form",
+    text: "Multi-step Form is a dynamic multi-step form using Next.js and Zod, featuring step navigation, real-time pricing updates, and cross-step state persistence, tackling challenges in dynamic validation and state transitions to ensure a smooth user experience.",
+    site: "https://multi-step-form-bice-seven.vercel.app/",
+  },
+  {
+    img: "/MariamJubrilpro2.webp",
+    alt: "REST Countries API app built by Otolorin Jubril — Next.js with search and dark mode",
+    title: "REST Countries API",
+    text: "REST Countries API is a responsive country information app using Next.js and the REST Countries API, featuring dynamic search/filtering, dark mode toggle, and detailed country profiles, solving challenges in API integration and state management to deliver a fast, intuitive interface for exploring global data.",
+    site: "https://countries-iota-eight.vercel.app/",
+  },
+  {
+    img: "/MariamJubrilpro3.webp",
+    alt: "Positivus landing page project built by Otolorin Jubril — Next.js with dynamic animations",
+    title: "Positivus Landing Page",
+    text: "Positivus is a responsive landing page using Next.js, showcasing services, team bios, and contact forms, optimizing UI/UX for conversions and brand consistency through dynamic animations and clean code.",
+    site: "https://tcw-gilt.vercel.app/",
+  },
+  {
+    img: "/MariamJubrilpro4.webp",
+    alt: "Diamond Luxury real estate landing page built by Otolorin Jubril — React and Tailwind CSS",
+    title: "Diamond Luxury",
+    text: "Diamond Luxury is a responsive real estate landing page using React.js and Tailwind CSS, featuring immersive property visuals and dynamic scroll effects, optimizing performance and visual consistency for premium user engagement.",
+    site: "https://diamondluxury.vercel.app/",
+  },
+];
+
+// ─── Experience data ────────────────────────────────────────────────────────────
+
+const experiences = [
+  {
+    date: "Mar 2026 - Present",
+    title: "IT Solution and Support Expert • VDT Communications Limited",
+    text: "Provide comprehensive IT solutions and technical support across the organization. Troubleshoot hardware, software, and network issues while managing IT infrastructure and user accounts. Implement system upgrades, deliver end-user training, and collaborate on digital transformation initiatives to improve overall organizational productivity.",
+  },
+  {
+    date: "Jun 2025 - Dec 2025",
+    title: "Frontend Developer • Flickssolutions Limited",
+    text: "Worked closely with designers and backend developers to implement responsive, user-friendly web interfaces using Angular, with a focus on performance, accessibility best practices, and maintainable component-based architecture.",
+  },
+  {
+    date: "Feb 2024 - Jan 2025",
+    title: "Frontend Developer • Sweep Drones Limited",
+    text: "Collaborated with cross-functional teams to translate UI/UX designs into responsive, performant web applications. Focused on building intuitive interfaces with clean, maintainable code while adhering to accessibility standards.",
+  },
+  {
+    date: "Aug 2023 - Dec 2023",
+    title: "Frontend Developer • ODExhange",
+    text: "Worked closely with designers and product managers to implement interactive, visually appealing user interfaces, ensuring consistency across devices and browsers while optimizing for performance and accessibility.",
+  },
+];
 
 export default function Home() {
   const container = useRef(null);
@@ -16,51 +73,13 @@ export default function Home() {
     offset: ["start start", "end end"],
   });
 
-  // useEffect( () => {
-  //   const lenis = new Lenis()
-
-  //   function raf(time) {
-  //     lenis.raf(time)
-  //     requestAnimationFrame(raf)
-  //   }
-
-  //   requestAnimationFrame(raf)
-  // })
-
-  const projects = [
-    {
-      img: "/MariamJubrilpro1.webp",
-      alt: "Mariam Jubril P1",
-      text: "Multi-step Form is a dynamic multi-step form using Next.js and Zod, featuring step navigation, real-time pricing updates, and cross-step state persistence, tackling challenges in dynamic validation and state transitions to ensure a smooth user experience.",
-      site: "https://multi-step-form-bice-seven.vercel.app/",
-    },
-    {
-      img: "/MariamJubrilpro2.webp",
-      alt: "Mariam Jubril P2",
-      text: "REST Countries API is a responsive country information app using Next.js and the REST Countries API, featuring dynamic search/filtering, dark mode toggle, and detailed country profiles, solving challenges in API integration and state management to deliver a fast, intuitive interface for exploring global data.",
-      site: "https://countries-iota-eight.vercel.app/",
-    },
-    {
-      img: "/MariamJubrilpro3.webp",
-      alt: "Mariam Jubril P3",
-      text: "Positivus is a responsive landing page using Next.js, showcasing services, team bios, and contact forms, optimizing UI/UX for conversions and brand consistency through dynamic animations and clean code.",
-      site: "https://tcw-gilt.vercel.app/",
-    },
-    {
-      img: "/MariamJubrilpro4.webp",
-      alt: "Mariam Jubril P4",
-      text: "Diamond Luxury is a responsive real estate landing page using React.js and Tailwind CSS, featuring immersive property visuals and dynamic scroll effects, optimizing performance and visual consistency for premium user engagement.",
-      site: "https://diamondluxury.vercel.app/",
-    },
-  ];
-
   return (
     <div className="">
       <Layout>
         <div className="w-[90%] mx-auto lg:w-[80%] lg:mr-auto">
           <section id="about" className="pt-16 lg:pt-28">
             <p className="sr-only">
-              Mariam Jubril is a frontend developer portfolio website showcasing
+              Otolorin Jubril is a frontend developer portfolio website showcasing
               projects, experience, and contact information.
             </p>
 
@@ -87,6 +106,7 @@ export default function Home() {
               and global communities.
             </p>
           </section>
+          
           <section id="project" className="pt-20 lg:pt-28">
             <div className="">
               <p className="text-[25px] leading-[42px] font-bold text-text2">
@@ -113,71 +133,22 @@ export default function Home() {
                 );
               })}
             </main>
-            {/* <div className="main" ref={container}>
-              {projects.map((project, i) => (
-                const targetScale = 1 - ( (projects.length - i) * 0.05);
-                <Portfolio key={`p_${i}`} {...project} i={i} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale}/>
-              ))}
-            </div> */}
-            {/* <div className="main">
-            <Portfolio
-              img="/pro1-.webp"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
-              site="https://multi-step-form-bice-seven.vercel.app/"
-            />
-            <Portfolio
-              img="/pro2-.webp"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
-              site="https://countries-iota-eight.vercel.app/"
-            />
-
-            <Portfolio
-              img="/pro3-.webp"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
-              site="https://tcw-gilt.vercel.app/"
-            />
-
-            <Portfolio
-              img="/pro4-.webp"
-              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab porriste obcaecati fugiat voluptates repudiandae sapiente voluptatummaxime alias expedita!"
-              site="https://jmariam.github.io/diamondluxury/"
-            />
-          </div> */}
           </section>
+          
           <section id="experience" className="pb-10">
             <div className="mb-8 ">
               <p className="text-[25px] leading-[42px] font-bold text-text2">
                 Experience
               </p>
-              {/* <p className="text-[13px] leading-[24px] lg:w-[55%]">
-                Some handpicked Projects I have worked on over the years.
-              </p> */}
             </div>
             <div className="grid gap-8">
-              <Experience
-                date="Jun 2025 - Dec 2025"
-                title="Frontend Developer • Flickssolutions Limited"
-                text="Worked closely with designers and backend developers to implement responsive, user-friendly web interfaces using Angular, with a focus on performance, accessibility best practices, and maintainable component-based architecture.
-"
-              />
-              <Experience
-                date="Feb 2024 - Jan 2025"
-                title="Frontend Developer • Sweep Drones Limited"
-                text="Collaborated with cross-functional teams to translate UI/UX designs into
-responsive, performant web applications. Focused on building intuitive
-interfaces with clean, maintainable code while adhering to accessibility
-standards.
-"
-              />
-              <Experience
-                date="Aug 2023 - Dec 2023"
-                title="Frontend Developer • ODExhange"
-                text="Worked closely with designers and product managers to implement interactive, visually appealing user interfaces, ensuring consistency across devices and browsers while optimizing for performance and accessibility."
-              />
+              {experiences.map((exp, i) => (
+                <Experience key={i} {...exp} />
+              ))}
             </div>
             <a
               href="/Mariam Jubril Resume.pdf"
-              download="Mariam Jubril's Resume"
+              download="Otolorin Jubril's Resume"
               className="mt-6 flex text-[18px] font-[500] underline items-center gap-2 text-text2"
             >
               Download Resume <FaArrowDown className="text-[16px]" />

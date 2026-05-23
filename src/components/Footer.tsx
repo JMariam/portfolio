@@ -36,34 +36,6 @@ export default function Footer() {
   }, [currentYear]);
 
   return (
-    // <div className=h-[5rem] relative bg-background2 text-accent transition-all duration-300 ${
-    //   show ? 'translate-y-0' : 'translate-y-full'
-    // }`}
-    // style={{
-    //   clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)",
-    //   willChange: 'transform'
-    // }}>
-    //   <div className="relative h-[calc(100vh+5rem)] -top-[100vh]">
-    //     <div className="h-[5rem] sticky top-[calc(100vh-5rem)]">
-    //       <div className="flex justify-between items-center h-full w-[90%] mx-auto">
-    //         <div className="[font-family:var(--font-beau)]">
-    //           <p className="text-[24px]">Jmariam</p>
-    //         </div>
-    //         <p className="text-[12px]">
-    //           © {currentYear} Jmariam. All rights reserved.
-    //         </p>
-    //         <p className="text-[12px] w-fit flex items-center gap-2">
-    //           <button
-    //             onClick={handleCopy}
-    //             className="hover:opacity-80 transition-opacity"
-    //           >
-    //             {copied ? 'Email copied!' : 'Click to copy email'}
-    //           </button>
-    //         </p>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <footer>
       <div
         className="bottom-0 relative bg-background2 text-accent lg:h-[5rem] h-[9rem]"
@@ -73,10 +45,10 @@ export default function Footer() {
           <div className="sticky h-[9rem] top-[calc(100vh-9rem)] lg:h-[5rem] lg:top-[calc(100vh-5rem)]">
             <div className="flex flex-col lg:flex-row gap-3 justify-center lg:justify-between items-center h-full w-[90%] m-auto">
               <div className={beau.className}>
-                <p className="text-[30px] ">Jmariam</p>
+                <p className="text-[30px] ">Otolorin</p>
               </div>
               <p className="text-[16px]">
-                © {currentYear} Mariam Jubril. All rights reserved.
+                © {currentYear} Otolorin Jubril. All rights reserved.
               </p>
               <p className="text-[16px] w-fit flex items-center gap-2">
                 <button onClick={handleCopy} className="">
